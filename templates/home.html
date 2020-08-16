@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-han">
+    <head>
+        <title>Homepage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        {% if username %}
+            <p>{{username}}，Welcome to homepage！ <a href="{{ url_for('panel') }}">Your Profile</a> <a href="{{ url_for('subscribe') }}">Subscribe</a> <a href="{{ url_for('logout') }}">Logout</a> </p>
+        {% else %}
+            <p>Welcome to homepage！ <a href="{{ url_for('login') }}">Login</a> <a href="{{ url_for('regist') }}">Register</a> <a href="{{ url_for('subscribe') }}">Subscribe</a></p>
+        {% endif %}
+    </body>
+</html>

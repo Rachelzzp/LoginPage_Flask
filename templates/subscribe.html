@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-han">
+    <head>
+        <title>Homepage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <form method="post" action='/subscribe'>
+        <label>Username：<input type="text" name="username" value=""></label><br>
+        <label>Email：<input type="email" name="email" value=""></label><br>
+        <input type="submit" value="Subscribe">
+    </form>
+
+    {% if error %}
+        <p>{{error}}</p>
+    {% endif %}
+        {#        <input type="submit" value="Subscribe">#}
+
+    </body>
+</html>

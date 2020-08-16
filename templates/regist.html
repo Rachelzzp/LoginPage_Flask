@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-han">
+<head>
+    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <form method="post" action='/regist'>
+        <label>Username：<input type="text" name="username" value=""></label></br>
+        <label>Password：<input type="password" name="password1" value=""></label></br>
+        <label>Re-enter Password：<input type="password" name="password2" value=""></label></br>
+        <label>Email：<input type="email" name="email" value=""></label></br>
+        <input type="submit" value="Register">
+    </form>
+
+    {% if error %}
+        <p>{{error}}</p>
+    {% endif %}
+</body>
+</html>
